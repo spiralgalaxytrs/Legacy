@@ -273,10 +273,8 @@ button[type=submit] {
   left: 0;
   top: 0;
   overflow: hidden;
-  background: #26282b;
-  background: -moz-linear-gradient(161deg, #26282b 0%, #26282b 49%, #9f8054 100%);
-  background: -webkit-linear-gradient(161deg, #26282b 0%, #26282b 49%, #9f8054 100%);
-  background: linear-gradient(161deg, #26282b 0%, #26282b 49%, #9f8054 100%);
+  background: #26282b00;
+
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#26282b",endColorstr="#9f8054",GradientType=1);
 }
 .video-bg video {
