@@ -281,7 +281,7 @@ button[type=submit] {
   min-width: 100%;
   min-height: 100%;
   float: left;
-  opacity: 0.15;
+  opacity: 0.4;
 }
 
 /* NAV PILLS */
@@ -3274,7 +3274,7 @@ button[type=submit] {
   }
 
   .video-bg video {
-    float: right;
+    float: left;
   }
 
   .certificates {
