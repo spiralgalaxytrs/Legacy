@@ -147,7 +147,7 @@
 	// SLIDER
 	var swiper = new Swiper('.slider-container', {
 		touchRatio: 0,
-		loop: true,
+		loop: false,
 		speed: 600,
 		autoplay: {
 			delay: 4500,

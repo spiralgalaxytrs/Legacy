@@ -1587,7 +1587,7 @@ button[type=submit] {
 }
 .property-plans table tr td:first-child {
   color: #9f8054;
-  width: 120px;
+  width: 250px;
   font-weight: 600;
 }
 .property-plans .tab-nav {
