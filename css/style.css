@@ -285,6 +285,16 @@ button[type=submit] {
 }
 
 /* NAV PILLS */
+
+@media only screen and (max-width:600px){
+  #landmarksImages .nav-pills .nav-item {
+    margin-right: 10px;
+  }
+  #landmarksImages .nav-pills .nav-item a{
+    font-size: 13px;
+  }
+}
+
 .nav-pills {
   width: 100%;
   display: flex;
@@ -309,6 +319,23 @@ button[type=submit] {
 }
 .nav-pills .nav-item .nav-link.active {
   border-bottom: 2px solid #26282b;
+}
+
+@media only screen and (min-width:600px){
+ #landmarksImages .tab-content .tab-pane figure{
+  margin-right: 20px;
+ }
+}
+
+#landmarksImages .tab-content .tab-pane figure{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height: 100%;
+}
+#landmarksImages .tab-content .tab-pane figure img{
+  height:300px;
 }
 
 /* BREADCRUMB */
