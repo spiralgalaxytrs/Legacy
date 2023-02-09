@@ -56,17 +56,17 @@ Legacy Estate | (Urban Farm Plots) | Loading">Loading</span></p>
   <div class="layer"></div>
 </div>
 <!-- end transition-overlay -->
-<div class="side-navigation">
-  <div class="menu">
-    <ul>
+<div id="suma"  class="side-navigation">
+  <div  class="menu">
+<ul>
       <li><a href="#index">START</a></li>
       <li><a href="#about">ABOUT</a></li>
       <li><a href="#Amenities">AMENITIES</a></li>
       <li><a href="#Landmarks">LANDMARKS</a></li>
       <li><a href="#Gallery">GALLERY</a></li>
-
       <li><a href="#contact">CONTACT</a></li>
-    </ul>
+    </ul> 
+   
   </div>
   <!-- end menu -->
   <div class="side-content">
@@ -650,7 +650,13 @@ Legacy Estate | (Urban Farm Plots) | Loading">Loading</span></p>
 <script src="js/jquery.stellar.js"></script> 
 <script src="js/isotope.min.js"></script> 
 <script src="js/scripts.js"></script>
-
+<script>
+  window.addEventListener('hashchange',()=>{
+    document.getElementById('suma').style.display="none";
+    
+     
+})
+</script> 
 
 <style>
      
