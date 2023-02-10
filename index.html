@@ -494,7 +494,7 @@ Legacy Estate | (Urban Farm Plots) | Loading">Loading</span></p>
         <!-- end col-6 -->
         <div class="col-lg-6">
         	<div class="contact-form">	
-			 <form id="contact" name="contact" method="post">
+			 <div id="contact" name="contact" method="post">
           <div class="form-group">
             <input type="text" name="name" id="name" autocomplete="off" required>
              <span>Your name</span>
@@ -506,8 +506,8 @@ Legacy Estate | (Urban Farm Plots) | Loading">Loading</span></p>
           </div>
           <!-- end form-group -->
           <div class="form-group"> 
-            <input type="text" name="subject" id="subject" autocomplete="off" required>
-            <span>Subject</span>
+            <input type="text" name="phone" id="mobile" autocomplete="off" required>
+            <span>Mobile</span>
           </div>
           <!-- end form-group -->
           <div class="form-group"> 
@@ -516,12 +516,12 @@ Legacy Estate | (Urban Farm Plots) | Loading">Loading</span></p>
           </div>
           <!-- end form-group -->
           <div class="form-group">
-            <button id="submit" type="submit" name="submit">
+            <button id="submit" onclick="sendMail()" type="submit" name="submit">
 				Submit
          </button>
           </div>
           <!-- end form-group -->
-        </form>
+        </div>
         <!-- end form --> 
          <div class="form-group">
           <div id="success" class="alert alert-success wow fadeInUp" role="alert"> Your message was sent successfully! We will be in touch as soon as we can. </div>
@@ -639,6 +639,7 @@ Legacy Estate | (Urban Farm Plots) | Loading">Loading</span></p>
 <!-- end footer --> 
 
 <!-- JS FILES --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/jquery.min.js"></script> 
 <script src="js/popper.min.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
@@ -657,6 +658,30 @@ Legacy Estate | (Urban Farm Plots) | Loading">Loading</span></p>
      
 })
 </script> 
+
+<script>
+const sendMail=async()=>{
+  console.log("Send mail....")
+var name = document.getElementById('name').value;
+var email = document.getElementById('email').value;
+var mobile = document.getElementById('mobile').value;
+var message= document.getElementById('message').value
+const result = await axios({
+  method: 'post',
+  url: 'http://144.126.253.144/contact-us',
+  data: {
+    name: name,
+    website:"Legacy Estate",
+    to: "rajkumar07trs@gmail.com",
+    email:email,
+    phone:mobile,
+    message:message
+  }
+});
+console.log(result.data);
+document.getElementById('result').innerHTML=result.data.message
+    }
+</script>
 
 <style>
      
